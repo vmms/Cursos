@@ -1,0 +1,118 @@
+/* Variables de colores y fondo */
+:root {
+  --color-principal: #000000;       /* verde principal para título y ver botón */
+  --color-texto: #686868;              /* color de texto */
+  --color-ver: #005927;             /* botón ver */
+  --color-ver-hover: #054421;       /* hover botón ver */
+  --color-descargar: #ffa500;       /* naranja para botón descargar */
+  --color-descargar-hover: #b87800; /* hover botón descargar */
+  --color-fondo: #f4fff2;           /* fondo general */
+  --color-texto: #333;              /* texto general */
+  --color-blanco: #ffffff;          /* fondo tarjetas/manuales */
+  --color-footer: #5a5a5a;             /* color del footer */
+}
+
+/* Estilos globales */
+body {
+  font-family: "Exo 2", sans-serif;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  text-align: center;
+  padding: 20px;
+}
+
+/* Estilo del título principal */
+h1 {
+  color: var(--color-texto);
+  font-size: 2.0em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+h2 {
+  color: var(--color-texto);
+  font-size: 1.6em;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  margin-bottom: 10px;
+}
+
+/* Contenedor de manuales */
+.manuales-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Cada tarjeta de manual */
+.manual-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-blanco);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.5);
+  max-width: 220px;
+}
+
+.manual-img-small {
+  width: 150px;
+  height: 130px;
+  object-fit: contain;
+  margin: 0 auto 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Botones dentro de las tarjetas */
+.manual-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* Botón "Ver" */
+a.button-ver {
+  display: inline-block;
+  padding: 6px 12px;
+  color: var(--color-blanco);
+  background-color: var(--color-ver);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+a.button-ver:hover {
+  background-color: var(--color-ver-hover);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Botón "Descargar" */
+a.button-descargar {
+  display: inline-block;
+  padding: 6px 12px;
+  color: var(--color-blanco);
+  background-color: var(--color-descargar);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+}
+
+a.button-descargar:hover {
+  background-color: var(--color-descargar-hover);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  margin-top: 30px;
+  font-size: 0.9em;
+  color: var(--color-footer);
+}
