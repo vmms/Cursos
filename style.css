@@ -19,24 +19,24 @@ body {
   color: var(--color-texto);
   text-align: center;
   padding: 20px;
-  background-image: url("img/wall.png");  /* cambia por tu ruta */
+  background-image: url("img/ilustraciones.svg");  /* cambia por tu ruta */
   background-repeat: no-repeat;            /* sin repetir */
   background-position: center center;      /* centrada */
   background-size: cover;                  /* se expande para cubrir toda la pantalla */
   background-attachment: fixed;            /* no se mueve al hacer scroll */
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255,255,255,1.0); /* transparencia aquí */
-  pointer-events: none; /* permite clics sobre ella */
-  z-index: -1; /* detrás del contenido */
-}
+  background-color: rgba(255,255,255,0.7); 
+  pointer-events: none; 
+  z-index: -1; 
+} */
 
 /* Estilo del título principal */
 h1 {
@@ -144,8 +144,84 @@ a.button-descargar:hover {
 }
 
 /* Footer */
-footer {
-  margin-top: 30px;
+footer.site-footer {
+  width: 100%;
+  background-color: #f9f9f9;
+  color: #333;
   font-size: 0.9em;
+  padding: 30px 10%;
+  margin-top: 45px;
+  border-top: 2px solid #ddd;
+  box-sizing: border-box;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 🔹 centramos ambas secciones */
+  gap: 40px;               /* 🔹 reducimos el espacio entre secciones */
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* 🔹 centramos ambas secciones */
+  column-gap: 40px; 
+  row-gap: 60px;         
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.footer-section {
+  min-width: 220px;        /* 🔹 evita que se peguen demasiado */
+  max-width: 300px;
+}
+
+.footer-section h4 {
+  margin-bottom: 8px;
+  font-size: 1.05em;
   color: var(--color-footer);
+}
+
+.footer-section p,
+.footer-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  line-height: 1.5;         /* 🔹 espaciado de texto más compacto */
+}
+
+.footer-section a {
+  color: var(--color-footer);
+  text-decoration: none;
+}
+
+.footer-section a:hover {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ccc;
+  text-align: center;
+  padding-top: 15px;
+  font-size: 0.85em;
+  color: var(--color-footer);
+  margin: 0 -10%; /* 🔹 Anula el padding lateral del footer */
+  padding-left: 10%;
+  padding-right: 10%;
+  box-sizing: border-box;
+}
+
+.footer-bottom::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw; /* 🔹 ancho completo de la ventana */
+  height: 1px;
+  background-color: #ccc;
+  transform: translateX(-10%); /* 🔹 compensa el padding lateral del footer */
 }
